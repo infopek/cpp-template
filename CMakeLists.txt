@@ -1,11 +1,14 @@
 cmake_minimum_required(VERSION 3.16..3.24)
 
-project(CPPTemplate 	VERSION 1.0.0
-                        DESCRIPTION "Project description"
-                        LANGUAGES CXX
+project(CPPTemplate 	
+    VERSION 1.0.0
+    DESCRIPTION "Project description"
+    LANGUAGES CXX
 	)     
 
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
+set(CMAKE_CXX_STANDARD_REQUIRED ON)
+set(CMAKE_CXX_EXTENSIONS OFF)
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
 
 include(${CMAKE_SOURCE_DIR}/external/vcpkg/scripts/buildsystems/vcpkg.cmake)
@@ -22,12 +25,6 @@ macro(find_package)
     _find_package(${ARGV})
   endif()
 endmacro()
-
-# Project can use external dependencies (headers, etc.)
-include_directories(
-	PUBLIC
-  		vendor
-	)
 
 add_subdirectory(external)
 add_subdirectory(core)

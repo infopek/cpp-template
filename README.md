@@ -11,7 +11,7 @@ Welcome to the C++ Core-App Template! This template provides a structured starti
 ## Getting Started
 1. Clone this repository to your local machine:
 ```bash
-git clone https://github.com/infopek/cpp-template.git
+git clone --recursive https://github.com/infopek/cpp-template.git
 ```
 2. Navigate to the cloned directory:
 ```bash

@@ -2,8 +2,64 @@
     "version": 3,
     "configurePresets": [
         {
-            "name": "default",
-            "binaryDir": "${sourceDir}/build"
+            "name": "base",
+            "hidden": true,
+            "binaryDir": "${sourceDir}/build-${presetName}",
+            "installDir": "${sourceDir}/install/${presetName}",
+            "condition": {
+                "type": "equals",
+                "lhs": "${hostSystemName}",
+                "rhs": "Windows"
+            }
+        },
+        {
+            "name": "x64-debug",
+            "displayName": "x64 Debug",
+            "inherits": "base",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Debug"
+            }
+        },
+        {
+            "name": "x64-release",
+            "displayName": "x64 Release",
+            "inherits": "x64-debug",
+            "cacheVariables": {
+                "CMAKE_BUILD_TYPE": "Release"
+            }
+        },
+        {
+            "name": "debug",
+            "description": "",
+            "displayName": "",
+            "inherits": [
+                "x64-debug"
+            ]
+        },
+        {
+            "name": "dbug",
+            "description": "",
+            "displayName": "",
+            "inherits": [
+                "debug"
+            ]
+        },
+        {
+            "name": "dbg",
+            "description": "",
+            "displayName": "",
+            "inherits": []
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "default-build-windows",
+            "displayName": "Default",
+            "configurePreset": "x64-debug"
         }
     ]
 }

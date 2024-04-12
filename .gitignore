@@ -22,8 +22,9 @@
 *.out
 *.app
 
-# CMake build directory
+# CMake build directories
 /build/
+/build-*/
 
 # vcpkg installed libraries
 /packages/

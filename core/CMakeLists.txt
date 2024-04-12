@@ -1,8 +1,9 @@
 cmake_minimum_required(VERSION 3.16..3.24)
 
-project(Core	VERSION 1.0.0
-                DESCRIPTION "Core description"
-                LANGUAGES CXX
+project(Core	
+    VERSION 1.0.0
+    DESCRIPTION "Core description"
+    LANGUAGES CXX
     )  
 
 add_library(Core 
