@@ -15,23 +15,20 @@ git clone https://github.com/infopek/cpp-template.git
 ```
 2. Navigate to the cloned directory:
 ```bash
-cd cpp-template
+cd ./cpp-template/
 ```
 2. Make sure you have Vcpkg installed. If not, you can follow the instructions on the [vcpkg GitHub](https://github.com/microsoft/vcpkg) page for installation.
-3. Configure using CMake:
+3. Generate build files:
 ```bash
 cmake --preset=default
-```
-Alternatively, you can use the `cmake` command with the following options:
-```bash
-cmake .. -DCMAKE_TOOLCHAIN_FILE=$ENV{VCPKG_ROOT}/scripts/buildsystems/vcpkg.cmake
 ```
 **Note**: If you don't have the `VCPKG_ROOT` environment variable set, make sure to set it to the root directory of your vcpkg installation. For example:
 ```bash
 export VCPKG_ROOT=/path/to/your/vcpkg.cmake
 ```
-Build the project:
+4. Build the project:
 ```bash
+cd ./build/
 cmake --build .
 ```
 ## Contributing
