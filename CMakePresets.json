@@ -31,28 +31,6 @@
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
-        },
-        {
-            "name": "debug",
-            "description": "",
-            "displayName": "",
-            "inherits": [
-                "x64-debug"
-            ]
-        },
-        {
-            "name": "dbug",
-            "description": "",
-            "displayName": "",
-            "inherits": [
-                "debug"
-            ]
-        },
-        {
-            "name": "dbg",
-            "description": "",
-            "displayName": "",
-            "inherits": []
         }
     ],
     "buildPresets": [
@@ -60,6 +38,15 @@
             "name": "default-build-windows",
             "displayName": "Default",
             "configurePreset": "x64-debug"
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "windows-default",
+            "configurePreset": "x64-debug",
+            "output": {
+                "outputOnFailure": true
+            }
         }
     ]
 }

@@ -6,7 +6,7 @@ Welcome to the C++ Core-App Template! This template provides a structured starti
 - Flexible Architecture: Easily add new modules or extend existing ones to suit your project's requirements.
 - Unit Testing: Includes a sample unit testing setup using Google Test framework, ensuring code reliability and robustness.
 ## Prerequisites
-- CMake (Version >= 3.14)
+- CMake (Version >= 3.16)
 - C++ Compiler supporting C++11 standard or later
 ## Getting Started
 1. Clone this repository to your local machine:
@@ -17,19 +17,19 @@ git clone --recursive https://github.com/infopek/cpp-template.git
 ```bash
 cd ./cpp-template/
 ```
-2. Make sure you have Vcpkg installed. If not, you can follow the instructions on the [vcpkg GitHub](https://github.com/microsoft/vcpkg) page for installation.
 3. Generate build files:
 ```bash
-cmake --preset=default
-```
-**Note**: If you don't have the `VCPKG_ROOT` environment variable set, make sure to set it to the root directory of your vcpkg installation. For example:
-```bash
-export VCPKG_ROOT=/path/to/your/vcpkg.cmake
+cmake --preset=x64-debug
 ```
 4. Build the project:
 ```bash
-cd ./build/
+cd ./build-x64-debug/
 cmake --build .
+```
+5. Run unit tests:
+```bash
+# In the project root directory
+ctest --preset=windows-default
 ```
 ## Contributing
 Contributions are welcome! If you have suggestions for improvements, please open an issue or create a pull request.
