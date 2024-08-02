@@ -27,7 +27,11 @@
         {
             "name": "x64-release",
             "displayName": "x64 Release",
-            "inherits": "x64-debug",
+            "inherits": "base",
+            "architecture": {
+                "value": "x64",
+                "strategy": "external"
+            },
             "cacheVariables": {
                 "CMAKE_BUILD_TYPE": "Release"
             }
@@ -35,15 +39,29 @@
     ],
     "buildPresets": [
         {
-            "name": "default-build-windows",
-            "displayName": "Default",
+            "name": "x64-debug-build",
+            "displayName": "x64 Debug Build",
             "configurePreset": "x64-debug"
+        },
+        {
+            "name": "x64-release-build",
+            "displayName": "x64 Release Build",
+            "configurePreset": "x64-release"
         }
     ],
     "testPresets": [
         {
-            "name": "windows-default",
+            "name": "x64-debug-test",
+            "displayName": "x64 Debug Test",
             "configurePreset": "x64-debug",
+            "output": {
+                "outputOnFailure": true
+            }
+        },
+        {
+            "name": "x64-release-test",
+            "displayName": "x64 Release Test",
+            "configurePreset": "x64-release",
             "output": {
                 "outputOnFailure": true
             }
