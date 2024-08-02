@@ -43,19 +43,19 @@ cmake --preset=x64-<debug/release>
 ### Debug
 ```bash
 cd ./build-x64-debug/
-cmake --build . -j 14
+cmake --build . -j 14   # 14 concurrent processes
 ```
 
 ### Release
 ```bash
 cd ./build-x64-release/
-cmake --build . --config Release -j 14
+cmake --build . --config Release -j 14  # 14 concurrent processes
 ```
 
 5. Run unit tests:
 ```bash
 # In the project root directory
-ctest --preset=windows-default
+ctest --preset=x64-debug-test
 ```
 
 ## Contributing
