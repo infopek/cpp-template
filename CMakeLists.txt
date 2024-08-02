@@ -4,8 +4,7 @@ cmake_minimum_required(VERSION 3.16..3.24)
 project(CPPTemplate 	
     VERSION 1.0.0
     DESCRIPTION "Project description"
-    LANGUAGES CXX
-	)     
+    LANGUAGES CXX)     
 
 # Set language options
 set(CMAKE_CXX_STANDARD 20)

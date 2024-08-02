@@ -11,7 +11,7 @@ if(GIT_FOUND)
                     RESULT_VARIABLE RETURN_CODE
                     OUTPUT_STRIP_TRAILING_WHITESPACE)
     message(STATUS "Updating git submodules:\n${EXISTING_SUBMODULES}")
-    execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --init --recursive
+    execute_process(COMMAND ${GIT_EXECUTABLE} submodule update --remote --recursive
                     WORKING_DIRECTORY ${CMAKE_CURRENT_SOURCE_DIR}
                     RESULT_VARIABLE RETURN_CODE)
     if(NOT RETURN_CODE EQUAL "0")
