@@ -1,6 +1,5 @@
 #pragma once
 
-namespace core
-{
+namespace core {
     double div(int a, int b);
 }

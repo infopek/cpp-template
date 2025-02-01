@@ -1,6 +1,5 @@
 #pragma once
 
-namespace core
-{
+namespace core {
     int mul(int a, int b);
 }

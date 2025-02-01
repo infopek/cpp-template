@@ -1,6 +1,5 @@
 #pragma once
 
-namespace core
-{
+namespace core {
     int sub(int a, int b);
 }

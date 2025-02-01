@@ -7,10 +7,8 @@
 
 #include <fmt/core.h>
 
-namespace core
-{
-    void printResults(int a, int b)
-    {
+namespace core {
+    void printResults(int a, int b) {
         fmt::print("{} + {} = {}\n", a, b, add(a, b));
         fmt::print("{} - {} = {}\n", a, b, sub(a, b));
         fmt::print("{} * {} = {}\n", a, b, mul(a, b));

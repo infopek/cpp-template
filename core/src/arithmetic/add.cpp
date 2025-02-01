@@ -1,9 +1,7 @@
 #include <arithmetic/add.h>
 
-namespace core
-{
-    int add(int a, int b)
-    {
+namespace core {
+    int add(int a, int b) {
         return a + b;
     }
 }

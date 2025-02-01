@@ -5,8 +5,7 @@
 
 #include <printer/print.h>
 
-int main()
-{
+int main() {
     int a = 5;
     int b = 4;
 
@@ -14,6 +13,4 @@ int main()
     int res2 = core::sub(a, b);
     int res3 = core::mul(a, b);
     double res4 = core::div(a, b);
-
-    core::printResults(a, b);
 }

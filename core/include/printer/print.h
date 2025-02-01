@@ -1,6 +1,5 @@
 #pragma once
 
-namespace core
-{
+namespace core {
     void printResults(int a, int b);
 }
