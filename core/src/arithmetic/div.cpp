@@ -1,6 +1,5 @@
 #include <arithmetic/add.h>
 
-#include <cassert>
 #include <stdexcept>
 
 namespace core {
